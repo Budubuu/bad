@@ -8,6 +8,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { ShowInformation } from './show_information.entity';
+import { Reservation } from 'src/reservation/entities/reservation.entity';
 
 @Entity({
   name: 'shows',
@@ -48,4 +49,7 @@ export class Show {
 
   @OneToMany(() => ShowInformation, (showInformation) => showInformation.show)
   showInformation: ShowInformation[];
+
+  @OneToMany(() => Reservation, (reservation) => reservation.show)
+  reservation: Reservation[];
 }

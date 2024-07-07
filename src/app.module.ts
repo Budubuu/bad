@@ -10,6 +10,8 @@ import { User } from './user/entities/user.entity';
 import { ShowsModule } from './shows/shows.module';
 import { Show } from './shows/entities/show.entity';
 import { ShowInformation } from './shows/entities/show_information.entity';
+import { ReservationModule } from './reservation/reservation.module';
+import { Reservation } from './reservation/entities/reservation.entity';
 
 const typeOrmModuleOptions = {
   useFactory: async (configService: ConfigService): Promise<TypeOrmModuleOptions> => ({
@@ -20,7 +22,7 @@ const typeOrmModuleOptions = {
     host: configService.get('DB_HOST'),
     port: configService.get('DB_PORT'),
     database: configService.get('DB_NAME'),
-    entities: [User, Show, ShowInformation],
+    entities: [User, Show, ShowInformation, Reservation],
     synchronize: configService.get('DB_SYNC'),
     logging: true,
   }),
@@ -45,6 +47,7 @@ const typeOrmModuleOptions = {
     AuthModule,
     UserModule,
     ShowsModule,
+    ReservationModule,
   ],
   controllers: [],
   providers: [],

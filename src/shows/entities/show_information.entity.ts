@@ -11,6 +11,7 @@ import {
 } from 'typeorm';
 import { Show } from './show.entity';
 import { join } from 'path';
+import { Reservation } from 'src/reservation/entities/reservation.entity';
 
 @Entity({
   name: 'show_informations',
@@ -40,4 +41,7 @@ export class ShowInformation {
   @ManyToOne(() => Show, (show) => show.showInformation)
   @JoinColumn({ name: 'show_id', referencedColumnName: 'id' })
   show: Show;
+
+  @OneToMany(() => Reservation, (reservation) => reservation.showInformation)
+  reservation: Reservation[];
 }
