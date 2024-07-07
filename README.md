@@ -1,3 +1,72 @@
+# RSERVATION SYSTEM
+
+주특기 플러스주차 개인과제
+
+- [API 명세서 링크](https://www.notion.so/8e52db4ed96a446d8f35930b4eba7e8d?v=9c6490e6a7064abb94c0fd999219e5bc&pvs=4)
+
+- [ERD 링크](https://drawsql.app/teams/josaw/diagrams/-3)
+
+### 폴더 구조
+
+```markdown
+📦src
+┣ 📂auth
+┃ ┣ 📜auth.module.ts
+┃ ┣ 📜jwt.strategy.ts
+┃ ┣ 📜roles.decorator.ts
+┃ ┗ 📜roles.guard.ts
+┣ 📂reservation
+┃ ┣ 📂dto
+┃ ┃ ┗ 📜reservation.dto.ts
+┃ ┣ 📂entities
+┃ ┃ ┗ 📜reservation.entity.ts
+┃ ┣ 📜reservation.controller.spec.ts
+┃ ┣ 📜reservation.controller.ts
+┃ ┣ 📜reservation.module.ts
+┃ ┣ 📜reservation.service.spec.ts
+┃ ┗ 📜reservation.service.ts
+┣ 📂shows
+┃ ┣ 📂dto
+┃ ┃ ┣ 📜get-show.dto.ts
+┃ ┃ ┗ 📜update-show.dto.ts
+┃ ┣ 📂entities
+┃ ┃ ┣ 📜show.entity.ts
+┃ ┃ ┗ 📜show_information.entity.ts
+┃ ┣ 📜shows.controller.spec.ts
+┃ ┣ 📜shows.controller.ts
+┃ ┣ 📜shows.module.ts
+┃ ┣ 📜shows.service.spec.ts
+┃ ┗ 📜shows.service.ts
+┣ 📂user
+┃ ┣ 📂dto
+┃ ┃ ┣ 📜login.dto.ts
+┃ ┃ ┗ 📜register.dto.ts
+┃ ┣ 📂entities
+┃ ┃ ┗ 📜user.entity.ts
+┃ ┣ 📂types
+┃ ┃ ┣ 📜reservation.status.ts
+┃ ┃ ┗ 📜userRole.type.ts
+┃ ┣ 📜user.controller.spec.ts
+┃ ┣ 📜user.controller.ts
+┃ ┣ 📜user.module.ts
+┃ ┣ 📜user.service.spec.ts
+┃ ┗ 📜user.service.ts
+┣ 📂utils
+┃ ┗ 📜userInfo.decorator.ts
+┣ 📜app.controller.spec.ts
+┣ 📜app.controller.ts
+┣ 📜app.module.ts
+┣ 📜app.service.ts
+┗ 📜main.ts
+.env
+.gitignore
+.prettierrc
+package-lock.json
+package.json
+README.md
+yarn.lock
+```
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
