@@ -12,6 +12,7 @@ import { Show } from './shows/entities/show.entity';
 import { ShowInformation } from './shows/entities/show_information.entity';
 import { ReservationModule } from './reservation/reservation.module';
 import { Reservation } from './reservation/entities/reservation.entity';
+import { SendbirdModule } from './sendbird/sendbird.module';
 
 const typeOrmModuleOptions = {
   useFactory: async (configService: ConfigService): Promise<TypeOrmModuleOptions> => ({
@@ -48,6 +49,7 @@ const typeOrmModuleOptions = {
     UserModule,
     ShowsModule,
     ReservationModule,
+    SendbirdModule,
   ],
   controllers: [],
   providers: [],
